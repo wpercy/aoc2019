@@ -1,5 +1,3 @@
-print "stufft"
-
 def intcode(_input):
     x = map(int,_input.split(','))
     x[1] = 12
