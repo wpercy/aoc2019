@@ -14,7 +14,7 @@ def get_fuel_2(mass):
     return new_fuel
 
 def get_fuel_3(mass):
-    fuel = math.floor(mass/3.0) - 2
+    fuel = get_fuel(mass) 
     if fuel < 1: return 0
     return fuel + get_fuel_3(fuel)
 
