@@ -1,6 +1,6 @@
 # DAY ONE (1)
 import math
-def day1a(_input)
+def day1a(_input):
     x = map(int, _input.split('\n'))
     _sum = 0
     for y in x:
@@ -22,7 +22,7 @@ def day1b(_input):
     return _sum
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     with open('data/day1.txt') as f:
         i = f.read()
     print day1a(i)
