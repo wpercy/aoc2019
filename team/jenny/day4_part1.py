@@ -45,15 +45,13 @@ def append_manual(s, e):
         if is_valid(n):
             valid += 1
 
-            print n
-
     return valid
 
 
-def combo(n, 5):
+def combo(n):
     '''this func returns combinatorial numbers. In this case, we use 5-combinations. 
     i got this factorial-based func online'''
-    return int((math.factorial(n)) / ((math.factorial(r)) * math.factorial(n - 5)))
+    return int((math.factorial(n)) / ((math.factorial(5)) * math.factorial(n - 5)))
 
 def run(begin_start, begin_end):
 
@@ -74,17 +72,17 @@ def run(begin_start, begin_end):
     #becuase we are restricted to 5-combinations, we can assume that we need a minimum of 5, 5 and up to x, 5
     s = 0
     for x in range(rounds):
-        s += combo(5 + x, 5)
+        s += combo(5 + x)
 
     #remove the combinations we didn't actually use. the pattern starts at 999k and goes down, so we remove
     #the initial patterns up to the distance from 999k
     for y in range(stop):
-        s -= combo(5 + y, 5)
+        s -= combo(5 + y)
         
     #Not sure why this is needed. Did tests and found this pattern as well, so I added it in
     if rounds >= 5:
         for y in range(rounds - 5):
-            s -= combo(5 + y, 5)
+            s -= combo(5 + y)
     
     #Take the remainders that we stripped off and calculate them manually
     s += append_manual(begin_start, start)
