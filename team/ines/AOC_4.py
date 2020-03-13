@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[60]:
-
-
 def check_both_1(num):
     num = str(num)
     repete = False

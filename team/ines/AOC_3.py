@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 def drawline(string1):
     
     # Split string into list
